@@ -1,0 +1,11 @@
+*.aux
+*.txt
+*.out
+*.gz
+*.toc
+Backup_*.*
+*eps-converted-to.pdf
+*.log
+*.asv
+*.bbl
+*.blg

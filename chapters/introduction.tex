@@ -1,0 +1,97 @@
+\chapter*{Előszó}
+\addcontentsline{toc}{chapter}{Előszó}
+
+A könyv megszületését az Prof. Drexler Dániel motiválta. A cél pálinkafőzésre is alkalmas rezsó kifejlesztése, egyetemi alkalmazásának bevezetése.
+
+
+Mélyebb érdeklődés esetén ajánljuk mátrixanalízis témába Rózsa Pál könyvét \cite{RozsaPalMatrix}, optimalizációs területen \cite{polyak1987introduction}, Bártfai Pál a lineáris algebra és az $n$-dimenziós geometria kapcsolatának rigorózus végigvezetését bemutató könyvét \cite{BartfaiNDimLinGeom}, stb.
+
+
+\chapter*{Jelölések és rövidítések jegyzéke}
+\addcontentsline{toc}{chapter}{Jelölések és rövidítések jegyzéke}
+
+
+\subsection*{Jelölések}
+
+
+\begin{tabular}{ll}
+	Skalár értékek: & $a,b,c,\dots,\alpha,\beta,\gamma,\dots$ \\
+	Oszlop/sor vektorok: & $\mathbf a,\mathbf b,\mathbf c,\dots$ \\
+	Mátrixok: &$\mathbf A,\mathbf B, \mathbf C,\dots$\\
+	Koordinátarendszerek (keretek), pontok: &$\mathrm A,\mathrm B, \mathrm C,\dots$\\
+	Az $A$ pont koordinátái az $R$ keretben: &$\mathbf a^{(R)}$\\
+	Az $O$ pontból a $P$ pontba mutató vektor: &$\overrightarrow{OP}$\\
+	 \ \ ennek koordinátái az $R$ keretben: &$\overrightarrow{OP}^{(R)}$\\
+	 Az $\mathbf u_1$, $\mathbf u_2$, $\mathbf u_3$ mátrixok által kifeszített & \\
+	 \ \ $\{ \alpha_1\mathbf u_1+\alpha_2\mathbf u_2+... | \alpha_1\in\mathbb R, \alpha_2\in\mathbb R, ... \}$ & $\Span{\mathbf u_1,\mathbf u_2,\mathbf u_3,...}$ \\
+	 \ \ tér: & \\
+	 Az $\mathbf M$ mátrix képtere: &$\Im{\mathbf M}$\\
+	 Az $\mathbf M$ mátrix nulltere: &$\Ker{\mathbf M}$
+\end{tabular}
+
+\subsection*{Rövidítések}
+
+\begin{tabular}{ll}
+	Szabadságfok (Degree of Freedom):& $\DoF$ \\
+	Redundanciafok (Degree of Redundancy):& $\DoR$ \\
+	Lineáris intERPoláció: & LERP \\
+	Gömbi lineáris interpoláció (Spherical LERP): & SLERP \\
+	Normalizált lineáris interpoláció (Normalized LERP): & NLERP \\
+	Tool Center Point & TCP
+\end{tabular}
+
+\subsection*{Vektor és mátrix műveletek}
+
+\begin{tabular}{ll}
+	Az $f$ skalár függvény gradiense:& $\grad_{f}$\\
+	
+	A $\mathbf v$ vektor transzponáltja:& ${\mathbf v}^{\T}$\\
+	
+	A $\mathbf v$ vektor 2-es normája (hossza):& $||\mathbf v||$\\
+	
+	A $\mathbf v$ vektor normalizáltja (iránya):& $\Normalize{\mathbf v}$\\
+	
+	A $\mathbf v$ és $\mathbf w$ vektorok skaláris szorzata:& ${\mathbf v}^{\T}\cdot\mathbf w$\\
+	
+	A $\mathbf v$ és $\mathbf w$ vektorok vektoriális szorzata:& ${\mathbf v} \times\mathbf w$\\
+	
+	Az a mátrix, amelyet bármely $\mathbf w$ vektorral & \\
+	 \ \ \ \ jobbról megszorozva $(\mathbf v\times \mathbf w)$ értékét kapjuk: & $\mathbf v\times$\\
+	
+	Az $\mathbf M$ mátrix $\mathbf M = \mathbf U \cdot \mathbf S \cdot \mathbf V^\T$ SVD felbontása:& $[\mathbf U,\mathbf S, \mathbf V] = \svd{(\mathbf M)}$\\
+	
+	Az $\mathbf M$ mátrix inverze:& ${\mathbf M}^{-1}$\\
+	
+	Az $\mathbf M$ mátrix transzponáltja:& ${\mathbf M}^{\T}$\\
+	
+	Az $\mathbf M$ mátrix determinánsa:& $\det{(\mathbf M)}$\\
+	
+	Az $\mathbf M$ mátrix ún. Moore-Penrose pszeudoinverze :& ${\mathbf M}^{+}$\\
+	
+	Az $\mathbf M$ mátrix ún. csillapított pszeudoinverze, & \\
+	 \ \ \ \ $\rho$ csillapítással :& ${\mathbf M}^{\rho +}$\\ %TODO: biztosan jó lesz ez magyarul?
+	
+	Az $\mathbf M$ mátrix nyoma (főátlóbeli elemeinek összege):& $\Trace{\mathbf M}$\\
+	
+	A $\mathbf t$ irány körüli $\varphi$ szögű elfordulást leíró transzformáció:& $\Rot{\mathbf t}{\varphi}$\\
+	
+	Az $x$, $y$ vagy $z$ tengely körüli $\varphi$ & \\
+	\hspace{15mm} szögű elfordulást leíró transzformáció:& $\Rotx{\varphi}$, $\Roty{\varphi}$, $\Rotz{\varphi}$ \\
+	
+	A $\mathbf d$ mértékű elmozdulást leíró transzformáció:& $\Tran{\mathbf d}$ \\
+	
+	Az $x$, $y$ vagy $z$ irányú $d$ & \\
+	\hspace{15mm} nagyságú elmozdulást leíró transzformáció:& $\Tranx{d}$, $\Trany{d}$, $\Tranz{d}$ \\
+	
+	Az aktuális példában egyértelmű, vagy indifferens méretű & \\
+	\hspace{15mm} vektorok, mátrixok jelölése: & $\begin{bmatrix}
+		c_1 \\ c_2 \\ \vdots
+	\end{bmatrix}$, $\begin{bmatrix}
+		m_{11} & m_{12} & \dots \\
+		m_{21} & m_{22} & \dots \\
+		\vdots & \vdots &
+	\end{bmatrix}$ \\
+
+	A $t$ érték a következő értékeket veheti fel: $a\leq t\leq b$ & $t\in[a,b]$
+	
+\end{tabular}

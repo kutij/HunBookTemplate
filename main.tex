@@ -1,0 +1,121 @@
+\documentclass[a4paper,11pt]{book}
+\usepackage[magyar]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amssymb,amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{boondox-calo}
+%\usepackage[caption=off]{subfig}
+\usepackage[export]{adjustbox}
+\usepackage{algorithm} 
+\usepackage{algpseudocode} 
+\usepackage[table]{xcolor}
+
+\newtheorem{defn}{Def.}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{example}{\small\captionsetup[figure]{font=small}}
+%\AtBeginEnvironment{proof}{\small}
+\AtBeginEnvironment{problem}{\small\captionsetup[figure]{font=small}}
+
+\newtheorem{example}{Példa}
+\newtheorem{problem}{Feladat}
+
+\renewenvironment{proof}
+{\small \itshape Bizonyítás:\captionsetup[figure]{font=small}
+}
+{
+	\hfill $\square$
+	\vspace{2mm}
+}
+
+\newenvironment{remark}
+{\small \itshape Megjegyzés:\captionsetup[figure]{font=small}
+}
+{
+	
+	\vspace{2mm}
+}
+
+\newenvironment{mathback}
+{\small \itshape Matematikai háttér:\captionsetup[figure]{font=small}
+}
+{
+			
+	\vspace{2mm}
+}
+
+\newtheorem{defn2}{Definíció}
+
+\usepackage{xcolor}
+
+\newcommand{\acos}{\operatorname{acos}}
+\newcommand{\asin}{\operatorname{asin}}
+\newcommand{\atan}{\operatorname{atan}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\atantwo}{\operatorname{atan2}}
+\newcommand{\Span}[1]{\operatorname{span} \left\{ #1 \right\}}
+\newcommand{\DoF}{\operatorname{DoF}}
+\newcommand{\DoR}{\operatorname{DoR}}
+\newcommand{\normalize}{\operatorname{normalize}}
+\newcommand{\grad}{\operatorname{grad}}
+\newcommand{\svd}{\operatorname{svd}}
+\newcommand{\inv}{\operatorname{inv}}
+%\newcommand{\dim}{\operatorname{dim}}
+\renewcommand{\Im}[1]{\mathcal R({#1})}
+\newcommand{\Ker}[1]{\mathcal N({#1})}
+\newcommand{\Rot}[2]{\mathrm{Rot}(#1,#2)}
+\newcommand{\Rotx}[1]{\mathrm{Rot}_x(#1)}
+\newcommand{\Roty}[1]{\mathrm{Rot}_y(#1)}
+\newcommand{\Rotz}[1]{\mathrm{Rot}_z(#1)}
+\newcommand{\Tran}[1]{\mathrm{Tran}(#1)}
+\newcommand{\Tranx}[1]{\mathrm{Tran}_x(#1)}
+\newcommand{\Trany}[1]{\mathrm{Tran}_y(#1)}
+\newcommand{\Tranz}[1]{\mathrm{Tran}_z(#1)}
+\newcommand{\Trace}[1]{\mathrm{Tr}\left( #1 \right)}
+\newcommand{\Normalize}[1]{\left( #1 \right)_{\mathrm{norm}}}
+\newcommand{\minimize}[1]{\mathop{\mathrm{minimize}}_{#1} \ \ }
+\newcommand{\subjectto}{\mathrm{subject \ to} \quad}
+\newcommand{\T}{\top}
+\newcommand{\DEG}{^{\circ}}
+
+%\babelhyphenation{hi-\'a-nyos-an m\'er-n\"ok-\"ok meg-\'ert-\'es-\'e-ben link-ek-nek hoz-z\'á-juk}
+
+\begin{document}
+
+\author{Rezső Dezső, Prof. Emeritus}
+\title{Bevezetés a rezsóológia elméletbe}
+\date{\today}
+
+\frontmatter
+\maketitle
+\tableofcontents
+
+\mainmatter
+
+
+\include{chapters/introduction}
+
+\part{Bevezetés}
+
+\include{chapters/rezso_alapfogalmak}
+
+\include{chapters/algebrai_attekintes}
+
+\part{Pálinkafőzés otthon}
+
+
+\part{Soros kinematikai láncú rezsók modellezése}
+
+\part{Rezsók dinamikai modellezése}
+
+
+\backmatter
+\bibliographystyle{IEEEtran}
+\bibliography{bookbib}
+
+\end{document}
